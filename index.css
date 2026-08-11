@@ -4,11 +4,51 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bg-body: #121212;
+    --bg-sidebar: #232b3a;
+    --bg-header: #1f2735;
+    --text-main: #e4e4e4;
+    --text-title: white;
+    --text-link: #e4e4e4;
+    --photo-border: #fff;
+    --photo-bg: #5c6a82;
+}
+
+body.light-mode {
+    --bg-body: #f2f2f2;
+    --bg-sidebar: #ffffff;
+    --bg-header: #f7f7f7;
+    --text-main: #1e1e1e;
+    --text-title: #121212;
+    --text-link: #1e1e1e;
+    --photo-border: #232b3a;
+    --photo-bg: #d0d5dd;
+}
+
 body {
     font-family: "Comic Sans MS", "Comic Sans", cursive;
-    background: #121212;
+    background: var(--bg-body);
     height: 100vh;
     padding: 24px;
+    transition: background 0.3s ease;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 10;
+    padding: 10px 16px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+    background: var(--bg-sidebar);
+    color: var(--text-title);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .layout {
@@ -28,30 +68,33 @@ body {
 }
 
 .sidebar {
-    background: #232b3a;
+    background: var(--bg-sidebar);
+    transition: background 0.3s ease;
 }
 
 .header,
 .body {
-    background: #1f2735;
+    background: var(--bg-header);
+    transition: background 0.3s ease;
 }
 
 .card-title {
-    color: white;
+    color: var(--text-title);
     font-size: 24px;
     margin-bottom: 10px;
     line-height: 1.2;
+    transition: color 0.3s ease;
 }
 
 .content {
     flex: 1;
     overflow: auto;
-    color: #e4e4e4;
+    color: var(--text-main);
+    transition: color 0.3s ease;
 }
-.content-big {
+
+.header .content:first-of-type {
     flex: none;
-    overflow: auto;
-    color: #e4e4e4;
 }
 
 .profile-photo {
@@ -59,9 +102,10 @@ body {
     height: 120px;
     overflow: hidden;
     border-radius: 50%;
-    background: #5c6a82;
+    background: var(--photo-bg);
     margin: 0 auto 20px;
-    border: 4px solid #fff;
+    border: 4px solid var(--photo-border);
+    transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .profile-photo img {
@@ -95,8 +139,9 @@ body {
 }
 
 h3 {
-    color: white;
+    color: var(--text-title);
     margin-bottom: 10px;
+    transition: color 0.3s ease;
 }
 
 ul {
@@ -114,7 +159,8 @@ p {
 }
 
 .links {
-    color: #e4e4e4;
+    color: var(--text-link);
     text-decoration: underline;
     font-size: 14px;
+    transition: color 0.3s ease;
 }

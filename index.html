@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Currículo</title>
   <link rel="stylesheet" href="index.css">
-  script src=""></script>
 </head>
 <body>
+
+<button id="theme-toggle" class="theme-toggle">🌙 Modo Claro</button>
 
 <div class="layout">
 
@@ -27,7 +28,7 @@
       <div class="info">
         <h3>Desenvolvedor Full Stack em Desenvolvimento Web</h3>
 
-        <p>📧 jhulianhvelozo@gmail.com</p>  <img src="https://skillicons.dev/icons?i=gmail" alt="">
+        <p>📧 jhulian@email.com</p>  <img src="https://skillicons.dev/icons?i=gmail" alt="">
         <p>📱 (48) 9 9830-8826</p>
         <p>📍 Brasil</p>
         🌐 <a class="links" href="https://github.com/jhulianVelozo" >github.com/jhulianVelozo</a> <br> <img src="https://skillicons.dev/icons?i=github" alt="">
@@ -53,13 +54,13 @@
     <div class="card-title">Experiência Profissional</div>
     <hr>
 
-    <div class="content-big">
+    <div class="content">
 
       <h3>Assistente técnico em desenvolvimento de Software - Clemar engenharia </h3> 
     </div>
-    <br><div class="card-title">Idiomas</div>
+    <div class="card-title" style="margin-top: 16px;">Idiomas</div>
      <hr>
-    <div class="content-big">
+    <div class="content">
 
       <h3>Português</h3>
       <p>Nível: Nativo</p>
@@ -119,6 +120,15 @@
   </div>
 
 </div>
+
+<script>
+  const btn = document.getElementById('theme-toggle');
+  btn.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    const isLight = document.body.classList.contains('light-mode');
+    btn.textContent = isLight ? '🌙 Modo Escuro' : '☀️ Modo Claro';
+  });
+</script>
 
 </body>
 </html>
