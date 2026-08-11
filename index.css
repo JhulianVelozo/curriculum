@@ -39,12 +39,17 @@ body {
 .card-title {
     color: white;
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     line-height: 1.2;
 }
 
 .content {
     flex: 1;
+    overflow: auto;
+    color: #e4e4e4;
+}
+.content-big {
+    flex: none;
     overflow: auto;
     color: #e4e4e4;
 }
@@ -106,4 +111,10 @@ li {
 p {
     line-height: 1.5;
     width: 325px;
+}
+
+.links {
+    color: #e4e4e4;
+    text-decoration: underline;
+    font-size: 14px;
 }
