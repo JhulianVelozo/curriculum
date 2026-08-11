@@ -93,8 +93,11 @@ body {
     transition: color 0.3s ease;
 }
 
-.header .content:first-of-type {
+.content-big {
     flex: none;
+    overflow: auto;
+    color: var(--text-main);
+    transition: color 0.3s ease;
 }
 
 .profile-photo {
